@@ -23,14 +23,12 @@ ProgFilesx86 = WSHShell.ExpandEnvironmentStrings("%ProgramFiles(x86)%")
 ProgFiles = WSHShell.ExpandEnvironmentStrings("%ProgramFiles%")
 
 'Check PDF42 is installed
-'PDF24EXE = ProgFiles & "\PDF24\pdf24-Ocr.exe" 'Only for try/debug
 If (fso.FileExists(ProgFilesx86 & "\PDF24\pdf24-Ocr.exe")) Then
     PDF24EXE = """" & ProgFilesx86 & "\PDF24\pdf24-Ocr.exe" & """"
 End if
 If (fso.FileExists(ProgFiles & "\PDF24\pdf24-Ocr.exe")) Then
     PDF24EXE = """" & ProgFiles & "\PDF24\pdf24-Ocr.exe" & """"
 End if
-'WScript.Echo PDF24EXE 'Only for try/debug
 if PDF24EXE = Empty Then
     Message = MsgBox ("PDF24 n'est pas install"&chr(233)&" sur ce poste. Veuillez assurez que PDF24 soit install"&chr(233)&" sur votre PC", 64, "Pr"&chr(233)&"requis manquant")
     WScript.Quit 
@@ -45,11 +43,6 @@ For Each Afile In AllFiles
         NewFileName = filenameWithoutExt & "_OCR.pdf"
         InpoutFile = """" & workpath2&filename & """"
         OutputFile = """" & workpath2&NewFileName & """"
-        'WScript.Echo OCRfile 'Only for try/debug
-        'WScript.Echo Afile.Name
-        'WScript.Echo filenameWithoutExt
-        'WScript.Echo NewFileName
-        'WScript.Echo NotMakeOCR & " Etape 0"
         if Afile.Name=NewFileName Then 'check if output file is allready present
             NotMakeOCR = "YES"
         End if
@@ -57,10 +50,8 @@ For Each Afile In AllFiles
         if fso.FileExists(workpath2&filenameWithoutExt & "_OCR.pdf") Then 'check if PDF already OCR
             NotMakeOCR = "YES"
         End if
-        'WScript.Echo NotMakeOCR & " Etape 2"
         if NotMakeOCR <> "YES" then
             if not (fso.FileExists(OutputFile)) then
-            'if Afile= then 'Check if file is already OCR go next
                 if not OCRfile = "_OCR" Then
                     'OCR PDF files
                     'WScript.Echo PDF24EXE & " -outputFile " & OutputFile & PDF24OCRArg & InpoutFile 'Only for try/debug
