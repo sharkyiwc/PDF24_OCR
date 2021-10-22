@@ -1,13 +1,12 @@
 '==========================================================================
 '
-' NAME: PDF24OCR.vbs
+' NAME: ScanPDF2OCR.vbs
 '
-' AUTHOR: Amey Fran�ois, SIVF
+' AUTHOR: Sharkyiwc
 ' DATE  : 18.10.2021
 '
-' COMMENT: OCR d'un fichiers PDF depuis un r�p�rtoire donn� 
-'          en utilisant PDF24.
-'	Doc : https://creator.pdf24.org/manual/10/#command-line
+' COMMENT: OCR a PDF file from a given directory using PDF24.
+' Doc : https://creator.pdf24.org/manual/10/#command-line
 '==========================================================================
 Dim ProgFilesx86, ProgFiles, PDF24
 Set fso = CreateObject("Scripting.FileSystemObject")
