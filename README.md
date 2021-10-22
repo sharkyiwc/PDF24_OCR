@@ -7,6 +7,7 @@ Scanners are used on multifunctional machines. Opt for scan2folder.
 
 Prerequisites
 This script is based on PDF24 https://www.pdf24.org/ which must be installed on the PCs.
+Command line PDF24 https://creator.pdf24.org/manual/10/#command-line
 
 Copy the script to the folder where all PDF scanner files are stored.
 
