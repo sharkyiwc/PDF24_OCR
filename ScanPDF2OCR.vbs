@@ -56,6 +56,7 @@ For Each Afile In AllFiles
                     'OCR PDF files
                     'WScript.Echo PDF24EXE & " -outputFile " & OutputFile & PDF24OCRArg & InpoutFile 'Only for try/debug
                     WSHShell.Run PDF24EXE & " -outputFile " & OutputFile & PDF24OCRArg & InpoutFile, 1, true
+                    WshShell.SendKeys "{ENTER}"
                     'If you want delete source file after ocr, uncomment next line
                     'fso.DeleteFile (InpoutFile)
                 End if
