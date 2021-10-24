@@ -6,7 +6,8 @@ Many companies set up DMS and forget that they need to index PDF documents.
 Scanners are used on multifunctional machines. Opt for scan2folder.
 
 Prerequisites
-This script is based on PDF24 https://www.pdf24.org/ which must be installed on the PCs.
+This script is based and use on PDF24 https://www.pdf24.org/.
+The system must have PDF24 installed
 Command line PDF24 https://creator.pdf24.org/manual/10/#command-line
 
 How to use it:
