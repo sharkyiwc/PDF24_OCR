@@ -9,8 +9,11 @@ Prerequisites
 This script is based on PDF24 https://www.pdf24.org/ which must be installed on the PCs.
 Command line PDF24 https://creator.pdf24.org/manual/10/#command-line
 
-Copy the script to the folder where all PDF scanner files are stored.
-
-Once the scans are done, a simple double click on the script and the documents will be indexed
+How to use it:
+Just copy the script to the folder where all PDF scanner files are stored.
+All users who have access to the folder can launch it to OCR PDFs.
+Once the scans are done, a simple double click on the script and the documents will be indexed.
 
 PDF files will be renamed to *_OCR.pdf
+
+There are tools to convert VBS to EXE
