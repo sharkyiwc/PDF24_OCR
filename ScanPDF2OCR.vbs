@@ -58,8 +58,12 @@ For Each Afile In AllFiles
                     WSHShell.Run PDF24EXE & " -outputFile " & OutputFile & PDF24OCRArg & InpoutFile, 1, true
                     'WSHShell.Run "echo.|" & PDF24EXE & " -outputFile " & OutputFile & PDF24OCRArg & InpoutFile, 1, true
                     'WshShell.SendKeys "{ENTER}"
-                    'If you want delete source file after ocr, uncomment next line
-                    'fso.DeleteFile (InpoutFile)
+                    'If you don't want delete source file after ocr, omment next 5 lines
+                    if fso.FileExists(workpath2&NewFileName) Then
+                        if fso.FileExists (Afile) then
+                            fso.DeleteFile Afile
+                        end if
+                    end if
                 End if
             End if
         End if
